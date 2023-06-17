@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link rel="shortcut icon" href="../logo.png" type="png">
+  <title>Iniciar sesión - MapArt</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <div class="title">
+        <a href="http://localhost:3000/MapArt">
+          <span class="logo">MapArt</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="container_login">
+
+      <div class="form_login">
+
+        <form id="frmlogin">
+
+          <h1>Iniciar sesión</h1>
+
+          <div class="login_container">
+
+            <label for="user_name"><strong>Usuario</strong></label>
+            <input type="text" placeholder="Ingrese Usuario" id="user" name="usuario" required>
+
+            <label for="password"><strong>Contraseña</strong></label>
+            <input type="password" placeholder="Ingrese su contraseña" id="name" name="password" required>
+            <div class="btn">
+              <button type="submit" class="ingresar">Ingresar</button>
+            </div>
+            <div class="rgt">
+              <a href="http://localhost:3000/MapArt/Register">¿No tienes una Cuenta? Regístrate</a>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <copyright class="copy">MapArt &copy; 2023</copyright>
+  </footer>
+
+</body>
+<script src="../javascripts/login.js"></script>
+
+</html>

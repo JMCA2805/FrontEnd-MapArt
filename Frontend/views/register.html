@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="shortcut icon" href="../logo.png" type="png">
+    <title>Registro - MapArt</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="title">
+                <a href="http://localhost:3000/MapArt">
+                    <span class="logo">MapArt</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container_register">
+
+            <div class="form_register">
+
+                <form id="formregister">
+
+                    <h1>Registro</h1>
+
+                    <div class="register_container">
+
+                        <label for="name"><strong>Nombre</strong></label>
+                        <input type="text" placeholder="Ingrese su nombre" id="nombre" name="nombre" required>
+
+                        <label for="surname"><strong>Apellido</strong></label>
+                        <input type="text" placeholder="Ingrese su apellido" id="apellido" name="apellido" required>
+
+                        <label for="email"><strong>Correo electrónico</strong></label>
+                        <input type="text" placeholder="Ingrese su correo electrónico" id="correo" name="email" required>
+
+                        <label for="username"><strong>Usuario</strong></label>
+                        <input type="text" placeholder="Ingrese su usuario" name="username" id="user" required>
+
+                        <label for="password"><strong>Contraseña</strong></label>
+                        <input type="password" placeholder="Ingrese su contraseña" id="password" name="password" required>
+
+                        <div class="btnr">
+                            <button type="submit" class="registro">Regístrate</button>
+                        </div>
+                        <div class="lg">
+                            <a href="http://localhost:3000/MapArt/Login">¿Ya tienes una Cuenta? Inicia Sección</a>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <copyright class="copy">MapArt &copy; 2023</copyright>
+    </footer>
+
+</body>
+
+<script src="../javascripts/register.js"></script>
+
+</html>

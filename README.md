@@ -9,7 +9,7 @@ Materia: FrontEnd I
 
 Instrucciones:
 
-1.- Copiar la carpeta Frontend en la carpeta MapArt
+1.- Copiar la carpeta Frontend en la carpeta MapArt del repositorio MapArt (https://github.com/JMCA2805/MapArt.git)
 
 2.- Cargar la base de datos
 

@@ -30,7 +30,7 @@ button {
 
 /* Logo */
 .title {
-  display: flex;
+  display: flexbox;
   justify-content: center;
   align-items: center;
   width: 10%;
@@ -41,6 +41,14 @@ span.logo {
   color: white;
   font-family: Georgia Black;
   font-size: 25px;
+}
+
+/* Contenedor de navegación desplegable*/
+.option_menu_cont {
+  width: 100%;
+  display: none;
+  justify-content: right;
+  align-items: center;
 }
 
 /* Contenedor de navegación */
@@ -121,12 +129,15 @@ span.action {
 
 .container_img {
   background-image: url('../images/login.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   display: flex;
-  width: 100%;
-  height: 250px;
   align-items: center;
+  width: 100%;
+  height: 300px;
+  /* Efecto Parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container_img h1 {
@@ -191,7 +202,7 @@ div.article_img img {
   height: 100%;
 }
 
-div.article_img img:hover {
+div.content_art:hover img {
   transform: scale(1.2);
 }
 
@@ -211,8 +222,16 @@ div.content_art p {
 div.inf {
   margin-top: 5px;
   text-align: justify;
-  padding: 5px 20px 5px 20px;
-  height: 115px;
+  padding: 0px 20px 0px 20px;
+  height: 80%;
+}
+
+div.inf1 {
+  margin-top: 5px;
+  text-align: justify;
+  padding: 0px 20px 0px 20px;
+  height: 30%;
+
 }
 
 div.pos a.action_2 {
@@ -224,9 +243,9 @@ div.pos a.action_2 {
 }
 
 div.pos {
-  display: flex;
+  display: flexbox;
   width: 100%;
-  height: 20px;
+  height: 8%;
 }
 
 /* Contenido 2 */
@@ -341,11 +360,15 @@ span.action_2 {
 
 div.content_four {
   background-image: url('../images/registro.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   height: 200px;
   padding: 20px 10% 20px 10%;
   text-align: center;
+
+  /* Efecto Parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.content_four a.action_2 {
@@ -421,14 +444,14 @@ hr.st {
 }
 
 .footer span.logo {
-  display: flex;
+  display: flexbox;
   justify-content: left;
   color: white;
   margin-bottom: 10px;
 }
 
 .footer a.dir {
-  display: flex;
+  display: flexbox;
   justify-content: left;
   color: white;
   margin-left: 10px;
@@ -469,7 +492,7 @@ main div.container_login {
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  height: 489px;
+  min-height: calc(100vh - 168px);
 }
 
 div.form_login {
@@ -508,29 +531,20 @@ div.form_login h1 {
   width: 100%;
   height: 100%;
   color: white;
-  
+
 }
 
 .login_container div.rgt {
-  display: flex;
+  display: flexbox;
   text-align: center;
-  color: white  ;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.login_container div.rgt {
-  display: flex;
-  text-align: center;
-  color: white  ;
+  color: white;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
 
 .login_container a {
-  color: white  ;
+  color: white;
 }
 
 .login_container div.rgt a:hover {
@@ -553,7 +567,7 @@ button.ingresar {
   width: 100px;
   text-align: center;
   box-shadow: 0 5px 5px 0 black;
-  
+
 }
 
 button.ingresar:hover {
@@ -575,6 +589,7 @@ main div.container_register {
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  min-height: calc(100vh - 168px);
 }
 
 div.form_register {
@@ -613,20 +628,20 @@ div.form_register h1 {
   width: 100%;
   height: 100%;
   color: white;
-  
+
 }
 
 .register_container div.lg {
-  display: flex;
+  display: flexbox;
   text-align: center;
-  color: white  ;
+  color: white;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
 
 .register_container a {
-  color: white  ;
+  color: white;
 }
 
 
@@ -650,7 +665,7 @@ button.registro {
   width: 100px;
   text-align: center;
   box-shadow: 0 5px 5px 0 black;
-  
+
 }
 
 button.registro:hover {
@@ -668,7 +683,7 @@ div.subsc {
   display: flex;
 }
 
-div.subscimg{
+div.subscimg {
   display: flex;
   background-image: url('../images/login.jpg');
   align-items: center;
@@ -680,7 +695,7 @@ div.subscimg{
 
 div.subscform {
   display: flex;
-  background-color: rgb(17, 16, 16); 
+  background-color: rgb(17, 16, 16);
   align-items: center;
   justify-content: center;
   height: 529px;
@@ -715,7 +730,7 @@ div.subscform div.formprom h1 {
   text-align: center;
 }
 
-div.formprom div.btnr{
+div.formprom div.btnr {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -735,12 +750,914 @@ div.formprom input:focus {
   background-color: #eeeeee;
 }
 
-div.proximamente{
+div.proximamente {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  height: 530px;
+  min-height: calc(100vh - 128px);
   font-family: Arial Black;
   background-image: url('../images/login.jpg');
+}
+
+/* Contenedor de imagen de portada 2 */
+
+.container_img_two {
+  background-image: url('../images/art_urbano.png');
+  display: flex;
+  width: 100%;
+  height: 250px;
+  align-items: center;
+
+  /* Efecto Parallax */
+
+  background-attachment: fixed;
+  background-position-y: -400px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.container_img_two h1 {
+  font-size: 60px;
+  font-family: 'Times New Roman';
+  color: white;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+/* Contenido Arte urbano */
+section.arte_urbano {
+  padding: 20px 10% 20px 10%;
+}
+
+section.arte_urbano h2 {
+  color: white;
+}
+
+section.arte_urbano p {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-indent: 2em;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 30px;
+}
+
+div.arte_urb {
+  display: flex;
+  justify-content: left;
+  width: 60%;
+}
+
+div.c_art_u {
+  display: flex;
+  align-items: center;
+}
+
+div.arte_urb_img {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  height: 5cm;
+}
+
+section.arte_urbano_two {
+  color: white;
+  padding: 20px 10% 20px 10%;
+  background-color: rgb(30, 30, 30);
+}
+
+section.arte_urbano_two h2 {
+  text-align: center;
+}
+
+div.span_art_u {
+  width: 100%;
+  text-align: center;
+}
+
+
+div.c_art_u_two {
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 20%;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+div.arte_urb_img_two img {
+  width: 100%;
+  margin-top: 15px;
+}
+
+div.artist {
+  display: flex;
+}
+
+section.arte_urbano_three {
+  color: white;
+  padding: 20px 10% 20px 10%;
+  background-color: rgb(17, 16, 16);
+}
+
+div.beneficio {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  margin-left: 30px;
+  text-align: justify;
+}
+
+div.beneficio li {
+  margin-top: 20px;
+}
+
+/* Container imagen de portada 3 */
+
+.container_img_three {
+  background-image: url('../images/escultura_font.png');
+  display: flex;
+  width: 100%;
+  height: 250px;
+  align-items: center;
+
+  /* Efecto Parallax */
+
+  background-attachment: fixed;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: 120% auto;
+}
+
+.container_img_three h1 {
+  font-size: 60px;
+  font-family: 'Times New Roman';
+  color: white;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+/* Container imagen de portada 4 */
+
+.container_img_four {
+  background-image: url('../images/monumentos_font.jfif');
+  display: flex;
+  width: 100%;
+  height: 250px;
+  align-items: center;
+
+  /* Efecto Parallax */
+
+  background-attachment: fixed;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: 120% auto;
+}
+
+.container_img_four h1 {
+  font-size: 60px;
+  font-family: 'Times New Roman';
+  color: white;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+
+/* Container imagen de portada 5 */
+
+.container_img_five {
+  background-image: url('../images/monumentos_font.jfif');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: -14cm;
+  display: flex;
+  width: 100%;
+  height: 250px;
+  align-items: center;
+}
+
+.container_img_five h1 {
+  font-size: 60px;
+  font-family: 'Times New Roman';
+  color: white;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+div.planes {
+  display: flexbox;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgb(30, 30, 30)
+}
+
+div.prices {
+  width: 100%;
+  background-color: rgb(17, 16, 16);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 30px 0;
+  min-height: calc(100vh - 505px);
+}
+
+/* Precios */
+div.content_plan {
+  background-color: black;
+  width: 25%;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 10px;
+  height: 310px;
+  border-radius: 20px;
+}
+
+div.content_plan h3 {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+div.content_plan hr {
+  margin-bottom: 25px;
+}
+
+div.content_plan li {
+  margin-bottom: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+div.btn1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  height: 20%;
+}
+
+
+/* Menu Despegable */
+
+
+div.menu_cont {
+  display: flex;
+  align-items: center;
+}
+
+div.option_menu_cont div {
+  list-style: none;
+  cursor: pointer;
+  transition: all .3s ease 0s;
+}
+
+div.menu_cont:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+div.menu_list {
+  cursor: pointer;
+  transition: all .3s ease 0s;
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+
+div.menu_list span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  color: white;
+  font-family: Arial Black;
+}
+
+div.menu_rama {
+  display: none;
+  position: absolute;
+}
+
+div.menu_rama>div {
+  height: 50px;
+}
+
+div.menu_rama>div {
+  width: 100px;
+  text-align: center;
+  background-color: black;
+}
+
+div.menu_rama>div>a {
+  color: white;
+}
+
+div.menu_rama>div:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+div.menu_cont:hover>div.menu_list>div.menu_rama {
+  display: block;
+}
+
+div.menu_list:hover>span {
+  color: black;
+}
+
+/* Carrusel de imágenes */
+
+
+.carrusel_img {
+  height: 400px;
+  position: relative;
+  width: 600px;
+  display: block;
+  margin: 50px auto;
+  border: 2px solid black;
+  background-color: #000000;
+}
+
+.carrusel_elemento_art {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.carrusel_elemento_art>div.title {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.carrusel_elemento_art>div.title>h2 {
+  text-align: center;
+  color: white;
+  font-family: Arial Black;
+  background-color: rgb(30, 30, 30);
+  font-size: 30px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 300px;
+  padding: 0 20px;
+}
+
+.flecha {
+  border: solid white;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 12px;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+.antes {
+  left: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+
+}
+
+.despues {
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^="art"] {
+  display: none;
+}
+
+.art-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url('../images/Banksy.jpg');
+  background-size: 100% 100%;
+}
+
+.art-2 {
+  background: url('../images/keith.jpg');
+  background-size: 100% 100%;
+}
+
+.art-3 {
+  background: url('../images/Shepard.jpg');
+  background-size: 100% 100%;
+}
+
+.art-4 {
+  background: url('../images/JR.jpg');
+  background-size: 100% 100%;
+}
+
+.art-5 {
+  background: url('../images/Blu.jpg');
+  background-size: 100% 100%;
+}
+
+*:target~.art-1 {
+  opacity: 0;
+}
+
+#art-1:target~.art-1 {
+  opacity: 1;
+
+}
+
+#art-2:target~.art-2,
+#art-3:target~.art-3,
+#art-4:target~.art-4,
+#art-5:target~.art-5 {
+  z-index: 3;
+  opacity: 1;
+}
+
+/* Escultura */
+
+[id^="escultura"] {
+  display: none;
+}
+
+.escultura-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url('../images/Michelangelo.jpg');
+  background-size: 100% 100%;
+}
+
+.escultura-2 {
+  background: url('../images/Gian-Lorenzo.webp');
+  background-size: 100% 100%;
+}
+
+.escultura-3 {
+  background: url('../images/Auguste-Rodin.webp');
+  background-size: 100% 100%;
+}
+
+.escultura-4 {
+  background: url('../images/anish-kapoor.webp');
+  background-size: 100% 100%;
+}
+
+.escultura-5 {
+  background: url('../images/constantine-bracussi.jpg');
+  background-size: 100% 100%;
+}
+
+*:target~.escultura-1 {
+  opacity: 0;
+}
+
+#escultura-1:target~.escultura-1 {
+  opacity: 1;
+
+}
+
+#escultura-2:target~.escultura-2,
+#escultura-3:target~.escultura-3,
+#escultura-4:target~.escultura-4,
+#escultura-5:target~.escultura-5 {
+  z-index: 3;
+  opacity: 1;
+}
+
+/* monumento */
+
+[id^="monumento"] {
+  display: none;
+}
+
+.monumento-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url('../images/Taj-Mahal.webp');
+  background-size: 100% 100%;
+}
+
+.monumento-2 {
+  background: url('../images/Colosseo.jpg');
+  background-size: 100% 100%;
+}
+
+.monumento-3 {
+  background: url('../images/Great-Sphinx-Giza-Egypt.webp');
+  background-size: 100% 100%;
+}
+
+.monumento-4 {
+  background: url('../images/machu-pichu.jpg');
+  background-size: 100% 100%;
+}
+
+.monumento-5 {
+  background: url('../images/china.jfif');
+  background-size: 100% 100%;
+}
+
+*:target~.monumento-1 {
+  opacity: 0;
+}
+
+#monumento-1:target~.monumento-1 {
+  opacity: 1;
+
+}
+
+#monumento-2:target~.monumento-2,
+#monumento-3:target~.monumento-3,
+#monumento-4:target~.monumento-4,
+#monumento-5:target~.monumento-5 {
+  z-index: 3;
+  opacity: 1;
+}
+
+/* ¡Pad */
+
+@media (max-width: 1000px) {
+
+  span.logo {
+    font-size: 20px;
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  div.option_sect {
+    font-size: 12px;
+    width: 80px;
+  }
+
+  div.title_2 h2 {
+    text-align: center;
+    padding: 20px;
+  }
+
+  div.content_two {
+    height: 100%;
+  }
+
+  section.video div.video {
+    padding: 20px;
+    height: 100%;
+  }
+
+  div.content_five {
+    padding: 30px;
+    height: 600px;
+  }
+
+  section.soon {
+    height: 300px;
+  }
+
+  div.content_three {
+    height: 400px;
+  }
+
+
+  div.content_four h3 {
+    font-size: 19px;
+  }
+
+  div.content_four h4 {
+    font-size: 18px;
+  }
+
+  div.c_art_u div.arte_urb_img {
+    padding-left: 30px;
+  }
+
+  section.arte_urbano div.c_art_u p {
+    padding-right: 25px;
+  }
+
+  div.subscimg div.prom p {
+    font-size: 13px;
+    padding: 0 20px 0 20px;
+  }
+
+
+  div.subsc {
+    display: unset;
+  }
+
+  div.subscimg {
+    width: 100%;
+    min-height: calc(100vh - 800px);
+    padding: 50px 0 50px 0;
+  }
+
+  div.subscimg div.prom p {
+    font-size: 15px;
+    padding: 0 20px 0 20px;
+  }
+
+  div.subscform {
+    width: 100%;
+  }
+
+  div.subscform div.formprom form.formsubs {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  div.content_art p {
+    font-size: 10px;
+  }
+
+  /* Precios */
+  div.content_plan {
+    height: 500px;
+  }
+
+  .container_img_two {
+    /* Efecto Parallax */
+      background-position-y: -250px;
+      background-size: 130%;
+  }
+  
+  .container_img_three {
+    /* Efecto Parallax */
+    background-position-y: 0px;
+  }
+  
+  .container_img_five {
+    background-position-y: 0px;
+    background-size: 120% auto;
+  }
+}
+
+
+/* Teléfono */
+
+@media (max-width: 600px) {
+
+  div.container_img h1 {
+    font-size: 30px;
+    margin: 150px 0 0 20px;
+  }
+
+  div.bar h2 {
+    font-size: 16px;
+    height: 32px;
+    padding-top: 15px;
+  }
+
+  div.title_2 h2 {
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  iframe {
+    background-color: #000000;
+    width: 100%;
+    height: 200px;
+  }
+
+  div.content_five {
+    padding: 20px 30px 0px 30px;
+    height: 400px;
+  }
+
+  section.cont_inf {
+    height: 400px;
+  }
+
+  div.content_five h2 {
+    font-size: 12px;
+  }
+
+  div.content_five p {
+    font-size: 12px;
+  }
+
+
+  section.soon {
+    height: 200px;
+  }
+
+  section.soon h3 {
+    font-size: 20px;
+  }
+
+  div.content_three {
+    height: 200px;
+  }
+
+  div.content_four {
+    height: 200px;
+  }
+
+  div.content_four h3 {
+    font-size: 15px;
+  }
+
+  div.content_four h4 {
+    font-size: 12px;
+  }
+
+  div.content_four a.action_2 {
+    width: 200px;
+    height: 40px;
+
+  }
+
+  div.content_four a.action_2 span {
+    font-size: 25px;
+
+  }
+
+  footer.footer address.address {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  footer.footer .copy {
+    font-size: 16px;
+  }
+
+  /* Arte Urbano  */
+
+  div.c_art_u {
+    display: unset;
+  }
+
+  div.c_art_u div.arte_urb {
+    width: 100%;
+  }
+
+  div.c_art_u div.arte_urb_img {
+    width: 100%;
+    padding-left: 18px;
+  }
+
+  section.arte_urbano {
+    padding-left: 10px;
+    font-size: 15px;
+  }
+
+  section.arte_urbano h2 {
+    text-align: center;
+  }
+
+  div.container_img_two h1 {
+    font-size: 30px;
+    margin-top: 120px;
+  }
+
+  section.arte_urbano_two {
+    text-align: center;
+  }
+
+  section.arte_urbano_three {
+    text-align: center;
+    padding-left: 20px;
+    font-size: 15px;
+  }
+
+  div.container_img_three h1 {
+    font-size: 30px;
+    margin-top: 120px;
+  }
+
+  section.arte_urbano div.c_art_u p {
+    padding-right: 0;
+  }
+
+  div.form_login {
+    width: 260px;
+  }
+
+  div.container_img_four h1 {
+    font-size: 30px;
+    margin-top: 120px;
+  }
+
+  div.container_img_five h1 {
+    font-size: 30px;
+    margin-top: 120px;
+  }
+
+  div.form_register {
+    width: 260px;
+  }
+
+  div.proximamente {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  div.subsc {
+    display: unset;
+  }
+
+  div.subscimg {
+    width: 100%;
+    height: auto;
+    padding: 50px 0 50px 0;
+  }
+
+  div.subscimg div.prom p {
+    font-size: 13px;
+    padding: 0 20px 0 20px;
+  }
+
+  div.subscform {
+    width: 100%;
+  }
+
+  div.subscform div.formprom form.formsubs {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  div.content_plan {
+    overflow: hidden;
+  }
+
+  /* Ocultando el Menu de PC */
+  .option {
+    display: none;
+  }
+
+  /* Mostrando el Menu Despegable */
+  div.option_menu_cont {
+    display: flex;
+  }
+
+  nav.nav {
+    overflow: visible;
+  }
+
+  div.content_art {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  section.art {
+    display: block;
+    height: 100%;
+  }
+
+  div.pos {
+    height: 30px;
+  }
+
+  /* Carrusel de imágenes */
+  .carrusel_img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .carrusel_elemento_art>div.title>h2 {
+    margin-top: 250px;
+    font-size: 20px;
+    height: 30px;
+  }
+
+  /* precios */
+  div.prices {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.content_plan {
+    width: 80%;
+    height: 350px;
+    margin: 20px 0;
+  }
+  
+  .container_img_two {
+    /* Efecto Parallax */
+      background-position-y: 0px;
+      background-size: 120% auto;
+  }
+
+  .container_img_three {
+    /* Efecto Parallax */
+    background-position-y: 0px;
+      background-size: 120% auto;
+  }
+
+  .container_img_five {
+    background-position-y: 0px;
+    background-size: 120% auto;
+  }
+
 }

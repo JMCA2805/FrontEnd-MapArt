@@ -18,8 +18,20 @@ subscr.addEventListener('submit', async (e) => {
     })
         .then((respuesta) => respuesta.json())
         .then((data) => {
-            alert("Gracias por suscribirte");
-            window.location.href = "http://localhost:3000/MapArt";
-            console.log(data);
-    });
+            Swal.fire(
+                '¡Suscripción Exitosa!',
+                '¡Presione el botón para continuar!',
+                'success'
+            )
+                .then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "http://localhost:3000/MapArt";
+                    } else {
+                        reject();
+                    }
+                })
+                .catch(() => {
+                    window.location.href = "http://localhost:3000/MapArt";
+                });
+        });
 })

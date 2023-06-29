@@ -19,9 +19,20 @@ register.addEventListener('submit', async (e) => {
     })
         .then((respuesta) => respuesta.json())
         .then((data) => {
-            alert("Te haz registrado");
-            console.log(data);
-            window.location.href = "http://localhost:3000/MapArt/Login";
-
-    });
+            Swal.fire(
+                '¡Registro Exitoso!',
+                '¡Presione el botón para continuar!',
+                'success'
+            )
+                .then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "http://localhost:3000/MapArt/Login";
+                    } else {
+                        reject();
+                    }
+                })
+                .catch(() => {
+                    window.location.href = "http://localhost:3000/MapArt/Login";
+                });
+        });
 })

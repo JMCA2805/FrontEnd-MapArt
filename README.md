@@ -1,5 +1,5 @@
 # FrontEnd-MapArt
-Actividad 3.1 Front End I
+Actividad 3.2 Front End I
 
 José Mauricio Camacho Angarita
 
@@ -9,7 +9,7 @@ Materia: FrontEnd I
 
 Instrucciones:
 
-1.- Copiar la carpeta Frontend en la carpeta MapArt del repositorio MapArt (https://github.com/JMCA2805/MapArt.git)
+1.- Copiar la carpeta Frontend en la carpeta MapArt del repositorio MapArt main-v2.0 (https://github.com/JMCA2805/MapArt.git)
 
 2.- Cargar la base de datos
 
